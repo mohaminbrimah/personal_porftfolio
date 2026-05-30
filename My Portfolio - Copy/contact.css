@@ -1,0 +1,82 @@
+/* Contact page–specific styles (shared nav/footer in styles.css) */
+
+/* Contact section: padded below fixed header */
+.contact-form {
+  padding: calc(var(--header-height) + 48px) 8% 60px; /* Top clears header */
+  min-height: calc(100vh - 200px); /* Fill viewport above footer */
+  background: var(--color-gray-bg); /* Light background like home */
+}
+
+/* "Contact Me" heading */
+.contact-form h2,
+.contact-me {
+  text-align: center; /* Center title */
+  font-size: clamp(1.75rem, 4vw, 2.25rem); /* Responsive size */
+  margin-bottom: 0.5em;
+  color: var(--color-black); /* Dark title text */
+}
+
+/* Blue accent on "Me" */
+.contact-me span {
+  color: var(--color-blue);
+}
+
+/* Short intro under title */
+.contact-intro {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Form container: centered, max width */
+.contact-form form {
+  max-width: 50em; /* Limit form width */
+  margin: 0 auto 2em; /* Center horizontally */
+  text-align: center;
+}
+
+/* Row holding two inputs side by side on desktop */
+.contact-form form .input-box {
+  display: flex; /* Flex row */
+  justify-content: center;
+  flex-wrap: wrap; /* Wrap on narrow screens */
+  gap: 1rem; /* Gap between inputs in a row */
+}
+
+/* All text inputs and textarea */
+.contact-form form .input-box input,
+.contact-form form textarea {
+  flex: 1 1 220px; /* Grow/shrink with minimum width */
+  width: 100%; /* Full width of flex cell */
+  padding: 1.25em; /* Comfortable padding */
+  font-size: 1rem;
+  color: var(--color-black);
+  background: rgb(243, 243, 246); /* Light input background */
+  border: 2px solid transparent; /* Border for focus/error states */
+  border-radius: 0.8rem;
+  margin: 0.5rem 0;
+  resize: vertical; /* Allow vertical resize on textarea only */
+  font-family: inherit; /* Match site font */
+}
+
+/* Focus state for accessibility */
+.contact-form form .input-box input:focus,
+.contact-form form textarea:focus {
+  outline: none;
+  border-color: var(--color-blue); /* Blue border when focused */
+}
+
+/* Submit button spacing */
+.contact-form form .btn-1 {
+  margin-top: 1.5rem;
+  border: none; /* Submit uses .btn-1 look */
+}
+
+/* Mobile: stack inputs full width */
+@media (max-width: 600px) {
+  .contact-form form .input-box {
+    flex-direction: column;
+  }
+}

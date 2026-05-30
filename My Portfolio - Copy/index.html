@@ -1,0 +1,221 @@
+<!DOCTYPE html> <!-- Declares HTML5 document type for the browser -->
+<html lang="en"> <!-- Root element; lang helps screen readers and SEO -->
+<head> <!-- Head: metadata and external resources (not visible on page) -->
+  <meta charset="UTF-8"> <!-- Character set so special characters display correctly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive layout on mobile -->
+  <meta name="description" content="Mohammed Amin Brimah — Software Engineer portfolio. Projects in HTML, CSS, JavaScript, PHP, C++, and Python."> <!-- Short summary for Google/search results — CHANGE this to your own pitch -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"> <!-- Tab icon (modern browsers) -->
+  <link rel="alternate icon" href="favicon.svg"> <!-- Fallback favicon -->
+  <link rel="stylesheet" href="styles.css"> <!-- Main stylesheet: colors, layout, responsive rules -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> <!-- Google Font: Poppins -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"> <!-- Icon library for skills & social icons -->
+  <title>Mohammed Amin Brimah | Software Engineer Portfolio</title> <!-- Browser tab title — CHANGE to your name -->
+</head>
+<body> <!-- All visible content lives inside body -->
+
+  <!-- ===== HEADER: fixed top bar with logo, nav links, and hamburger (mobile) ===== -->
+  <header class="header">
+    <a href="#home" class="logo"><span>Mohammed Amin</span>&nbsp;Brimah</a> <!-- Logo scrolls to home; CHANGE name inside span -->
+
+    <!-- Hamburger: visible only on small screens (see styles.css @media 768px) -->
+    <button type="button" class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <span class="hamburger-bar"></span> <!-- Top bar of menu icon -->
+      <span class="hamburger-bar"></span> <!-- Middle bar -->
+      <span class="hamburger-bar"></span> <!-- Bottom bar -->
+    </button>
+
+    <!-- Nav links scroll to sections on this single page -->
+    <nav class="navbar" id="navbar">
+      <a href="#home">Home</a> <!-- Scrolls to id="home" -->
+      <a href="#about">About</a> <!-- Scrolls to id="about" -->
+      <a href="#skills">Skills</a> <!-- Scrolls to id="skills" -->
+      <a href="#projects">Projects</a> <!-- Scrolls to id="projects" -->
+      <a href="#contact">Contact</a> <!-- Scrolls to id="contact" — replaces removed header button -->
+    </nav>
+  </header>
+
+  <main> <!-- Main content wrapper (semantic HTML for accessibility) -->
+
+    <!-- ===== HOME / HERO — text + photo; photo moves above text on mobile (CSS order) ===== -->
+    <section class="home" id="home"> <!-- Scroll target for #home -->
+      <div class="home-inner"> <!-- Wrapper: controls desktop side-by-side vs mobile stack -->
+        <div class="home-content animate-on-scroll"> <!-- Intro text column -->
+          <h3>Hi</h3> <!-- Small greeting -->
+          <h1>I'm <span>Mohammed Amin Brimah</span>, a Software Engineer</h1> <!-- Headline — CHANGE name/title -->
+          <p>
+            I am a passionate software engineer who brings ideas to life through clean code and thoughtful design.
+            Blue and black are my signature colors: <strong>blue</strong> suggests trust, clarity, and technology, while
+            <strong>black</strong> adds depth, focus, and a modern, professional edge.
+          </p>
+          <div class="btn-box"> <!-- Action buttons row -->
+            <a href="#contact" class="btn-1" title="Let's discuss your project">Hire Me</a> <!-- Scrolls to contact -->
+            <a href="#projects" class="btn-2">View Projects</a> <!-- Scrolls to projects -->
+            <!-- download= forces file save; CHANGE href when you add your PDF as resume.pdf in this folder -->
+            <a href="resume.pdf" class="btn-2 btn-resume" download="Mohammed_Amin_Brimah_Resume.pdf">
+              <i class="bx bx-download" aria-hidden="true"></i> Download CV
+            </a>
+          </div>
+        </div>
+        <div class="img-box animate-on-scroll"> <!-- Profile photo — shown FIRST on mobile (see styles.css) -->
+          <img src="Blue suit.jpg" alt="Portrait of Mohammed Amin Brimah" width="560" height="560" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT — text only (no image); lighter dark band above Skills ===== -->
+    <section class="about" id="about"> <!-- Scroll target for #about nav link -->
+      <div class="about-inner animate-on-scroll"> <!-- Centered text wrapper; fades in on scroll -->
+        <p class="section-label section-label--center">Get to know me</p> <!-- Small uppercase label above title -->
+        <h2 class="heading">About <span>me</span></h2> <!-- Main about heading — CHANGE text if needed -->
+        <h3>Software <span>Engineer</span></h3> <!-- Subtitle / job title — CHANGE to match your role -->
+        <p class="about-text"> <!-- Larger body copy — CHANGE to your real bio -->
+          I build responsive websites and applications using HTML, CSS, JavaScript, PHP, C++, and Python.
+          I focus on clean structure, accessible design, and code that is easy to maintain.
+          Whether it is a portfolio, a business site, or a small backend tool, I aim to deliver work that looks professional and works reliably.
+        </p>
+        <div class="about-actions"> <!-- Call-to-action buttons -->
+          <a href="#skills" class="btn-2">My Skills</a>
+          <a href="#contact" class="btn-1">Hire Me</a>
+          <a href="resume.pdf" class="btn-2 btn-resume" download="Mohammed_Amin_Brimah_Resume.pdf">
+            <i class="bx bx-download" aria-hidden="true"></i> Download CV
+          </a> <!-- Same PDF as hero — add resume.pdf to your project folder -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS — darkest section; heading "My" = white, "Skills" = blue ===== -->
+    <section class="skills" id="skills"> <!-- Scroll target for #skills nav link -->
+      <p class="section-label section-label--light">What I use</p> <!-- Muted uppercase label on dark bg -->
+      <h2 class="section-heading skills-heading">My <span>Skills</span></h2> <!-- "My" = white (CSS); "Skills" in span = blue -->
+      <p class="skills-intro"> <!-- Short intro above skill cards -->
+        As a software engineer, I build with web technologies and programming languages. Here are the tools I use most:
+      </p>
+      <ul class="skills-list"> <!-- Grid of skill cards — ADD/REMOVE li items for your skills -->
+        <li class="skill-card animate-on-scroll"><i class="bx bxl-html5"></i><span>HTML</span></li>
+        <li class="skill-card animate-on-scroll"><i class="bx bxl-css3"></i><span>CSS</span></li>
+        <li class="skill-card animate-on-scroll"><i class="bx bxl-javascript"></i><span>JavaScript</span></li>
+        <li class="skill-card animate-on-scroll"><i class="bx bxl-php"></i><span>PHP</span></li>
+        <li class="skill-card animate-on-scroll"><i class="bx bx-code-alt"></i><span>C++</span></li>
+        <li class="skill-card animate-on-scroll"><i class="bx bxl-python"></i><span>Python</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== PROJECTS — show real apps (not this portfolio; you're already viewing it) ===== -->
+    <section class="projects" id="projects"> <!-- Scroll target for #projects nav link -->
+      <h2 class="section-heading">My <span>Projects</span></h2> <!-- Section title; "Projects" is blue via CSS span -->
+      <p class="section-intro"> <!-- Short description under title -->
+        Applications I have built to solve real problems — payroll, shopping, and interactive learning.
+      </p>
+      <div class="projects-grid" id="projects-grid"> <!-- Responsive grid; cards wrap on smaller screens -->
+
+        <!-- PROJECT 1: Payslip App — replaces "Personal Portfolio" (listing this site here is redundant) -->
+        <article class="project-card animate-on-scroll"> <!-- One card; animate-on-scroll fades in on scroll -->
+          <div class="project-image project-image--payslip" aria-hidden="true"></div> <!-- Colored banner; swap for <img> when you have a screenshot -->
+          <div class="project-body"> <!-- Text area below image -->
+            <h3>Payslip Generator</h3> <!-- Project name shown to visitors -->
+            <p>Web app that calculates salary, deductions, and net pay — generates clear payslips for employees.</p> <!-- What the project does -->
+            <ul class="project-tags"> <!-- Tech stack pills -->
+              <li>PHP</li> <!-- Backend language -->
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <div class="project-links"> <!-- Action links row -->
+              <a href="#" class="btn-2" target="_blank" rel="noopener">Live Demo</a> <!-- CHANGE # to hosted payslip app URL -->
+              <a href="#" class="project-link-muted" target="_blank" rel="noopener">GitHub</a> <!-- CHANGE # to payslip repo URL -->
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: Fruit App — interactive fruit catalog or nutrition quiz -->
+        <article class="project-card animate-on-scroll">
+          <div class="project-image project-image--fruit" aria-hidden="true"></div> <!-- Green/orange gradient placeholder -->
+          <div class="project-body">
+            <h3>Fruit App</h3>
+            <p>Browse fruits with images, facts, and filters — built to practice DOM manipulation and responsive UI.</p>
+            <ul class="project-tags">
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" class="btn-2" target="_blank" rel="noopener">Live Demo</a> <!-- CHANGE to fruit app live URL -->
+              <a href="#" class="project-link-muted" target="_blank" rel="noopener">GitHub</a> <!-- CHANGE to fruit app repo -->
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 3: Shop App — e-commerce style storefront -->
+        <article class="project-card animate-on-scroll">
+          <div class="project-image project-image--shop" aria-hidden="true"></div> <!-- Shop-themed gradient placeholder -->
+          <div class="project-body">
+            <h3>Shop App</h3>
+            <p>Online shop with product listings, cart logic, and checkout flow — demonstrates full frontend structure.</p>
+            <ul class="project-tags">
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>PHP</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" class="btn-2" target="_blank" rel="noopener">Live Demo</a> <!-- CHANGE to shop app live URL -->
+              <a href="#" class="project-link-muted" target="_blank" rel="noopener">GitHub</a> <!-- CHANGE to shop app repo -->
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- View More + GitHub — button hides automatically if no .project-card--extra cards exist -->
+      <div class="projects-more"> <!-- Centered row below grid -->
+        <button type="button" class="btn-2" id="projects-view-more" aria-expanded="false">
+          View More Projects
+        </button> <!-- Only useful when you add hidden cards with class project-card--extra -->
+        <a href="https://github.com/mohaminbrimah" class="projects-github-link" target="_blank" rel="noopener">
+          See all on GitHub <i class="bx bx-link-external" aria-hidden="true"></i>
+        </a> <!-- Opens your full GitHub profile in a new tab -->
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-section" id="contact">
+      <h2 class="section-heading contact-heading">Contact <span>Me</span></h2>
+      <p class="section-intro">
+        Interested in working together? Send a message—I typically respond within 24–48 hours.
+      </p>
+
+      <!-- Success/error messages appear here after form submit (script.js reads URL ?status=) -->
+      <div id="form-status" class="form-status" role="status" aria-live="polite" hidden></div>
+
+      <!-- Form sends POST data to contact.php (PHP server required) -->
+      <form class="contact-form" id="contact-form" action="contact.php" method="POST" novalidate>
+        <div class="input-box"> <!-- First row: two fields side by side on desktop -->
+          <input type="text" id="name" name="name" placeholder="Full Name" required autocomplete="name"> <!-- name= must match contact.php $_POST keys -->
+          <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email">
+        </div>
+        <div class="input-box">
+          <input type="tel" id="phone" name="phone" placeholder="Phone Number" autocomplete="tel">
+          <input type="text" id="subject" name="subject" placeholder="Subject">
+        </div>
+        <textarea id="message" name="message" rows="8" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-1" id="submit-btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER — social icons + essential links only (no duplicate of full nav) ===== -->
+  <footer class="footer">
+    <div class="social"> <!-- Professional: LinkedIn + GitHub matter most for hiring — CHANGE href="#" -->
+      <a href="https://www.linkedin.com/in/mohammed-amin-brimah-a16877373/" aria-label="LinkedIn profile" target="_blank" rel="noopener"><i class="bx bxl-linkedin-square"></i></a>
+      <a href="https://github.com/mohaminbrimah" aria-label="GitHub profile" target="_blank" rel="noopener"><i class="bx bxl-github"></i></a>
+      <a href="mailto:aminbrimah1234@gmail.com" aria-label="Email contact"><i class="bx bx-envelope"></i></a> <!-- CHANGE to mailto:you@email.com -->
+    </div>
+    <ul class="footer-nav"> <!-- Minimal footer links — avoids repeating entire header nav -->
+      <li><a href="resume.pdf" download>Resume</a></li> <!-- Downloads CV PDF -->
+      <li><a href="#contact">Get in Touch</a></li> <!-- Scrolls to contact form -->
+    </ul>
+    <p class="copyright">&copy; 2026 Mohammed Amin Brimah | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script> <!-- JavaScript: menu, scroll animations, form validation -->
+</body>
+</html>
