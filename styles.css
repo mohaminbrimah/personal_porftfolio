@@ -670,15 +670,24 @@ html {
 
 /* Project card preview banners — each class = different gradient until you add real screenshots */
 .project-image--payslip {
-  background: linear-gradient(135deg, var(--color-blue-dark), #2d3748); /* Blue-gray payroll theme */
+  background-image: url('payslip.png');
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-blue-dark);
 }
 
 .project-image--fruit {
-  background: linear-gradient(135deg, #22c55e, #f97316); /* Green to orange — fresh fruit feel */
+  background-image: url('fruit.png');
+  background-size: cover;
+  background-position: center;
+  background-color: #22c55e;
 }
 
 .project-image--shop {
-  background: linear-gradient(135deg, var(--color-black-soft), var(--color-blue)); /* Dark shop storefront style */
+  background-image: url('e-commerce.png');
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-black-soft);
 }
 
 /* Legacy placeholders (keep if old cards are reused later) */
