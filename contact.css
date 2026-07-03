@@ -74,9 +74,27 @@
   border: none; /* Submit uses .btn-1 look */
 }
 
-/* Mobile: stack inputs full width */
+/* Mobile: stack inputs full width and reduce field size */
 @media (max-width: 600px) {
+  .contact-form {
+    padding: calc(var(--header-height) + 36px) 5% 40px;
+  }
+
   .contact-form form .input-box {
     flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .contact-form form .input-box input,
+  .contact-form form textarea {
+    padding: 0.9rem 0.95rem;
+    font-size: 0.95rem;
+    margin: 0;
+    min-height: 2.8rem;
+    border-radius: 0.7rem;
+  }
+
+  .contact-form form textarea {
+    min-height: 8rem;
   }
 }
