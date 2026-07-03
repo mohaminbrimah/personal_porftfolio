@@ -821,40 +821,4 @@ html {
   color: #c62828;
   border: 1px solid #ef9a9a;
 }
-
-.contact-form {
-  max-width: 50em; /* Limit form width */
-  margin: 0 auto;
-}
-
-.contact-form .input-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.contact-form .input-box input,
-.contact-form textarea {
-  flex: 1 1 220px; /* Inputs grow; min width 220px before wrap */
-  width: 100%;
-  padding: 1.25rem;
-  font-size: 1rem;
-  color: var(--color-black);
-  background: rgb(243, 243, 246); /* Light gray input background */
-  border: 2px solid transparent;
-  border-radius: 0.8rem;
-  font-family: inherit; /* Use site font inside inputs */
-  resize: vertical; /* Allow vertical resize on textarea only */
-}
-
-.contact-form .input-box input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--color-blue); /* Blue border when field is focused */
-}
-
-.contact-form .btn-1 {
-  margin-top: 1.25rem;
-  border: none; /* Submit button uses .btn-1 styling */
-}
+/* Contact form styles are defined in contact.css to avoid duplication. */
