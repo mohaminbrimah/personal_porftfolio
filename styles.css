@@ -821,4 +821,103 @@ html {
   color: #c62828;
   border: 1px solid #ef9a9a;
 }
-/* Contact form styles are defined in contact.css to avoid duplication. */
+/* Contact form styles */
+.contact-form {
+  max-width: 50em; /* Limit form width */
+  margin: 0 auto 2em; /* Center horizontally */
+  text-align: center;
+}
+
+/* Row holding two inputs side by side on desktop */
+.contact-form .input-box {
+  display: flex; /* Flex row */
+  justify-content: center;
+  flex-wrap: wrap; /* Wrap on narrow screens */
+  gap: 1rem; /* Gap between inputs in a row */
+}
+
+/* All text inputs and textarea */
+.contact-form .input-box input,
+.contact-form textarea {
+  flex: 1 1 220px; /* Grow/shrink with minimum width */
+  width: 100%; /* Full width of flex cell */
+  padding: 1.25em; /* Comfortable padding */
+  font-size: 1rem;
+  color: var(--color-black);
+  background: rgb(243, 243, 246); /* Light input background */
+  border: 2px solid transparent; /* Border for focus/error states */
+  border-radius: 0.8rem;
+  margin: 0.5rem 0;
+  resize: vertical; /* Allow vertical resize on textarea only */
+  font-family: inherit; /* Match site font */
+}
+
+/* Focus state for accessibility */
+.contact-form .input-box input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-blue); /* Blue border when focused */
+}
+
+/* Submit button spacing */
+.contact-form .btn-1 {
+  margin-top: 1.5rem;
+  border: none; /* Submit uses .btn-1 look */
+  cursor: pointer;
+}
+
+/* Mobile: Card style like Image 2 */
+@media (max-width: 600px) {
+  .contact-section {
+    background: linear-gradient(135deg, #4d79ff, #25a4a5); /* Gradient background like Image 2 */
+    padding: 60px 5% 80px;
+  }
+  
+  .contact-section .contact-heading,
+  .contact-section .contact-heading span,
+  .contact-section .section-intro {
+    color: var(--color-white); /* White text on gradient */
+  }
+
+  .contact-form {
+    background: #ffffff; /* White card */
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 12px 36px rgba(10, 10, 12, 0.08);
+  }
+
+  .contact-form .input-box {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Override inputs for mobile to have borders and white background like Image 2 */
+  .contact-form .input-box input,
+  .contact-form textarea {
+    flex: none; /* Fix the tall input bug (flex basis height in column) */
+    background: #ffffff;
+    border: 1px solid #d9d9dd;
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    margin: 0 0 1rem 0;
+    min-height: auto;
+  }
+
+  .contact-form textarea {
+    min-height: 120px;
+  }
+  
+  .contact-form .input-box input:focus,
+  .contact-form textarea:focus {
+    border-color: var(--color-blue);
+    box-shadow: 0 6px 18px rgba(26, 92, 255, 0.06);
+  }
+
+  .contact-form .btn-1 {
+    width: 100%;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+    padding: 12px;
+  }
+}
